@@ -48,7 +48,7 @@
 			this.text = key;
 			this.x = Math.random() * w;
 			this.y = Math.random() * h;
-			this.font = words[key] * 10 + 'px arial'
+			this.font = words[key] * 7 + 'px monospace'
 			this.speed = (words[key]);
 		}
 		for (key in words) {
@@ -79,7 +79,7 @@
 		setInterval(function() {
 			c.clearRect(0,0,w,h);
 			animation();
-		},24);
+		},50);
 
 	}
 
