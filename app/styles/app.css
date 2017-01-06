@@ -1,0 +1,10 @@
+
+
+body {
+  animation: pulse 5s infinite;
+  overflow: auto;
+  height: 100%;
+  margin: 0;
+  font-family: monospace;
+  background: url("https://upload.wikimedia.org/wikipedia/en/b/be/MBDTF_ALT.jpg");
+}
