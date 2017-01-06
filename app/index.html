@@ -30,18 +30,18 @@
 	var words_attr = [];
 	string_handle(lyric);
 
-	var canvas = document.getElementById('c');
+	var canvas = document.getElementById('app');
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 
 	if (canvas.getContext) {
-		var c = canvas.getContext('2d'),
+		var app = canvas.getContext('2d'),
 			w = canvas.width,
 			h = canvas.height;
 
-		c.strokeStyle = 'red';
-		c.fillStyle = 'blue';
-		c.lineWidth = 5;
+		app.strokeStyle = 'red';
+		app.fillStyle = 'blue';
+		app.lineWidth = 5;
 
 		// constructor
 		Word = function(key) {
@@ -57,10 +57,10 @@
 
 		function animation() {
 			for (var i = 0; i < words_attr.length; i++) {
-				c.font = words_attr[i].font;
-				c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
-				words_attr[i].width = c.measureText(words_attr[i].text).width;
-				c.stroke();
+				app.font = words_attr[i].font;
+				app.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+				words_attr[i].width = app.measureText(words_attr[i].text).width;
+				app.stroke();
 			}
 			move();
 		}
@@ -77,7 +77,7 @@
 		}
 
 		setInterval(function() {
-			c.clearRect(0,0,w,h);
+			app.clearRect(0,0,w,h);
 			animation();
 		},50);
 
