@@ -1,7 +1,6 @@
 
 
 body {
-  animation: pulse 5s infinite;
   overflow: auto;
   height: 100%;
   margin: 0;
